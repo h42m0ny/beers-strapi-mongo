@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "styles",
+  "info": {
+    "name": "Style"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "style_name": {
+      "type": "string",
+      "required": true
+    },
+    "style_id": {
+      "via": "style",
+      "model": "beer"
+    },
+    "category": {
+      "model": "category",
+      "via": "styles"
+    },
+    "ref_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

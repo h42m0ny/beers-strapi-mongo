@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "beers",
+  "info": {
+    "name": "Beer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "availibility": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "alcohol": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "serving": {
+      "type": "string"
+    },
+    "brewery": {
+      "model": "brewery",
+      "via": "brewery_id"
+    },
+    "category": {
+      "model": "category",
+      "via": "category_id"
+    },
+    "style": {
+      "model": "style",
+      "via": "style_id"
+    },
+    "ref_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

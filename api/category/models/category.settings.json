@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "cat_name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "category_id": {
+      "via": "category",
+      "model": "beer"
+    },
+    "ref_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "styles": {
+      "via": "category",
+      "collection": "style"
+    }
+  }
+}
