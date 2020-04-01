@@ -11,7 +11,7 @@
         "password": "${process.env.DATABASE_PASSWORD || ''}"
       },
       "options": {
-        "authenticationDatabase": "${process.env.MONGODB_ADDON_AUTEHNTICATION}"
+        "authenticationDatabase": "${process.env.DB_AUTHENTICATION}"
       }
     }
   }
