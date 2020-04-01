@@ -5,8 +5,7 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "postinstall":"NODE_ENV=production npm run build",
-    "start": "strapi start production",
+    "start": "strapi NODE_ENV=production start",
     "build": "strapi build",
     "strapi": "strapi"
   },
