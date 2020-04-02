@@ -11,7 +11,8 @@
         "password": "${process.env.DATABASE_PASSWORD || ''}"
       },
       "options": {
-        "authenticationDatabase": "${process.env.DB_AUTHENTICATION}"
+        "ssl": true,
+        "authenticationDatabase": "${process.env.DATABASE_NAME || 'strapi'}"
       }
     }
   }
