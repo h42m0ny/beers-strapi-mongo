@@ -12,7 +12,7 @@
       },
       "options": {
         "ssl": true,
-        "authenticationDatabase": "${process.env.DATABASE_NAME || 'strapi'}"
+        "authenticationDatabase": "${process.env.DB_AUTHENTICATION|| 'strapi'}"
       }
     }
   }
